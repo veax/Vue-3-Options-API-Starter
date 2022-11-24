@@ -5,13 +5,13 @@
 
 <script lang="ts">
 // imports
-import { defineComponent } from "vue"
-import DemoComponent from "@/components/DemoComponent.vue"
+import { defineComponent } from 'vue'
+import DemoComponent from '@/components/DemoComponent.vue'
 
 // component
 export default defineComponent({
   // name of component (optional)
-  name: "App",
+  name: 'App',
 
   // mark all components from import in components object for using in <template>
   components: {

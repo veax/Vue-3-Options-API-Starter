@@ -23,10 +23,10 @@
 
 <!-- script tag without setup option as we using Options API -->
 <script lang="ts">
-import { defineComponent } from "vue"
-import type { PropType } from "vue"
-import useAppConfigStore from "@/store/stores/useAppConfigStore"
-import { mapState, mapStores } from "pinia"
+import { defineComponent } from 'vue'
+import type { PropType } from 'vue'
+import useAppConfigStore from '@/store/stores/useAppConfigStore'
+import { mapState, mapStores } from 'pinia'
 
 // declaring internal interfaces
 interface ComplexProps {
@@ -46,8 +46,8 @@ export default defineComponent({
 
     // 2nd option: mapState : get only what needed with name mapping
     ...mapState(useAppConfigStore, {
-      getCampagneMappedFromStore: "getCampagne",
-      campagneMappedFromStore: "campagne",
+      getCampagneMappedFromStore: 'getCampagne',
+      campagneMappedFromStore: 'campagne',
     }),
     // state properties are not private in Pinia, so no real benefit to using getters ->
     // we can using state directly in components

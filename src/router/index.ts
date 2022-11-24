@@ -1,10 +1,10 @@
-import { createRouter, RouteRecordRaw, createWebHistory } from "vue-router"
-import RechercheAvancee from "@/views/RechercheAvancee.vue"
-import About from "@/views/About.vue"
-import pinia from "@/store/pinia"
-import useAppConfigStore from "@/store/stores/useAppConfigStore"
-import * as Routes from "@/shared/routes"
-import { CODE_403_FORBIDDEN, CODE_404_NOT_FOUND } from "@/shared/errors"
+import { createRouter, RouteRecordRaw, createWebHistory } from 'vue-router'
+import RechercheAvancee from '@/views/RechercheAvancee.vue'
+import About from '@/views/About.vue'
+import pinia from '@/store/pinia'
+import useAppConfigStore from '@/store/stores/useAppConfigStore'
+import * as Routes from '@/shared/routes'
+import { CODE_403_FORBIDDEN, CODE_404_NOT_FOUND } from '@/shared/errors'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,9 +12,9 @@ const routes: Array<RouteRecordRaw> = [
     name: Routes.HOME_ROUTE_NAME,
     redirect: () => {
       const params = new URLSearchParams(window.location.search)
-      if (params.get("numeroPacage")) {
+      if (params.get('numeroPacage')) {
         const appConfigStore = useAppConfigStore(pinia)
-        appConfigStore.setNumeroPacage(params.get("numeroPacage"))
+        appConfigStore.setNumeroPacage(params.get('numeroPacage'))
         window.history.pushState({}, document.title, window.location.pathname)
         return Routes.SYNTHESE_DOSSIER_ROUTE_PATH
       } else {

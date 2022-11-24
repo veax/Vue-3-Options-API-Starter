@@ -1,4 +1,4 @@
-import { defineStore } from "pinia"
+import { defineStore } from 'pinia'
 
 export interface AppConfigStoreState {
   applicationName: string
@@ -8,12 +8,12 @@ export interface AppConfigStoreState {
 
 const params = new URLSearchParams(window.location.search)
 
-const useAppConfigStore = defineStore("appConfig", {
+const useAppConfigStore = defineStore('appConfig', {
   state: (): AppConfigStoreState => ({
     applicationName:
-      params?.get("titreApplication") || "Instruction suivi des surfaces 2023",
-    campagne: parseInt(params.get("campagne") || "2023"),
-    numeroPacage: params.get("numeroPacage"),
+      params?.get('titreApplication') || 'Instruction suivi des surfaces 2023',
+    campagne: parseInt(params.get('campagne') || '2023'),
+    numeroPacage: params.get('numeroPacage'),
   }),
   getters: {
     getApplicationName: (state) => state.applicationName,

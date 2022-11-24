@@ -1,12 +1,12 @@
-import { createApp } from "vue"
-import { createPinia } from "pinia"
-import pinia from "@/store/pinia"
-import router from "@/router"
-import useAppConfigStore from "./store/stores/useAppConfigStore"
-import axios from "axios"
-import axiosRetry from "axios-retry"
-import "./style.css"
-import App from "./App.vue"
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import pinia from '@/store/pinia'
+import router from '@/router'
+import useAppConfigStore from './store/stores/useAppConfigStore'
+import axios from 'axios'
+import axiosRetry from 'axios-retry'
+import './style.css'
+import App from './App.vue'
 
 const configApp = (): void => {
   axiosRetry(axios, {
@@ -23,4 +23,4 @@ const app = createApp(App)
 app.use(router)
 app.use(piniaStore)
 
-app.mount("#app")
+app.mount('#app')
